@@ -1,6 +1,7 @@
 ---
 layout: home
-title: OST
+title: Home
+nav_order: 4
 ---
 
 # Hello World

@@ -32,6 +32,13 @@ theme: just-the-docs
 color_scheme: ost
 search_enabled: false
 
+# aux_links:
+#   "Source on GitHub":
+#     - "//github.com/IFS-Web/WE3-React"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
 # plugins:
 #  - jekyll-feed # MS: not needed and slows down the build
 

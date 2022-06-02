@@ -30,6 +30,7 @@ github_username:  misto
 # Build settings
 theme: just-the-docs
 color_scheme: ost
+search_enabled: false
 
 # plugins:
 #  - jekyll-feed # MS: not needed and slows down the build

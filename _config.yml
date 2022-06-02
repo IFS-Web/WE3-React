@@ -22,7 +22,7 @@ title: WE3 – React
 email: mirko.stocker@ost.ch
 description: >- # this means to ignore newlines until "baseurl:"
   Unterlagen zum React-Teil des Web Engineering 3 Moduls der OST – Ostschweizer Fachhochschule
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/WE3-React" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: m_st
 github_username:  misto

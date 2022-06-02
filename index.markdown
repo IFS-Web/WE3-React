@@ -1,5 +1,6 @@
 ---
 layout: home
+title: OST
 ---
 
 # Hello World

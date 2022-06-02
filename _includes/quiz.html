@@ -1,0 +1,28 @@
+
+<div>
+  <table style="border-bottom: 1px solid #ddd">
+    <tbody>
+      <tr>
+        <th>{{ include.header | markdownify}}</th>
+      </tr>
+      <tr>
+        <td>{{ include.question | markdownify}}</td>
+      </tr>
+      <tr class="answer default-hidden">
+        <td>{{ include.answer | markdownify}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <button
+      class="check btn btn-primary"
+      onClick="(function (btn){
+        var theTable = btn.parentNode.previousElementSibling;
+        var theAnswer = theTable.getElementsByClassName('answer')[0];
+        theAnswer.classList.toggle('default-hidden');
+      }(this))"
+    >
+      Antwort anzeigen
+    </button>
+  </div>
+</div>

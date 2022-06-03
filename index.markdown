@@ -1,7 +1,8 @@
 ---
-layout: home
 title: Home
-nav_order: 4
+layout: default
+nav_order: 1
+next: Woche 1
 ---
 
 # Hello World
@@ -44,8 +45,12 @@ function App() {
 
 {% assign q1-header = "Quiz" %}
 {% assign q1-question = "Inwiefern unterscheidet sich der JSX-Code überhaupt von HTML?" %}
-{% assign q1-answer = "In diesem Beispiel gibt es nur einen Unterschied: anstelle von `class` wird `className` verwendet, da `class` ein Javascript-Keyword ist." %}
+{% capture q1-answer %}
+In diesem Beispiel gibt es nur einen Unterschied: anstelle von `class` wird `className` verwendet, da `class` ein **Javascript-Keyword** ist.
+{% endcapture %}
 {% include quiz.html header=q1-header question=q1-question answer=q1-answer %}
+
+
 
 # Komponenten Erstellen
 

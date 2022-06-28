@@ -1,0 +1,29 @@
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <th style="border-bottom: 1px solid #ddd">
+          {{ include.header | markdownify}}
+        </th>
+      </tr>
+      <tr>
+        <td>{{ include.task | markdownify}}</td>
+      </tr>
+      <tr class="hint default-hidden" style="color:grey">
+        <td>{{ include.hint | markdownify}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <button
+      class="check btn btn-primary"
+      onClick="(function (btn){
+          var theTable = btn.parentNode.previousElementSibling;
+          var theAnswer = theTable.getElementsByClassName('hint')[0];
+          theAnswer.classList.toggle('default-hidden');
+        }(this))"
+    >
+      Tips anzeigen
+    </button>
+  </div>
+</div>

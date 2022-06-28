@@ -1,0 +1,21 @@
+<div>
+  <table>
+    <tbody>
+      <tr class="solution default-hidden">
+        <td>{{ include.solution | markdownify}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <button
+      class="check btn btn-success"
+      onClick="(function (btn){
+            var theTable = btn.parentNode.previousElementSibling;
+            var theAnswer = theTable.getElementsByClassName('solution')[0];
+            theAnswer.classList.toggle('default-hidden');
+          }(this))"
+    >
+      Lösung
+    </button>
+  </div>
+</div>

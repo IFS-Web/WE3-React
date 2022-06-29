@@ -1,6 +1,6 @@
 ---
 title: Woche 1
-nav_order: 2
+nav_order: 3
 has_children: true
 previous: Home
 next: JSX

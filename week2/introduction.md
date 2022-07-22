@@ -1,5 +1,5 @@
 ---
-title: Einführung
+title: Woche 2 - Einführung
 parent: Woche 2
 nav_order: 1
 previous: Woche 2

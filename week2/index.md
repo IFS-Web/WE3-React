@@ -3,7 +3,7 @@ title: Woche 2
 nav_order: 4
 has_children: true
 previous: Woche 1
-next: BOR Einführung
+next: Woche 2 - Einführung
 ---
 
 # Woche 2

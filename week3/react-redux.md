@@ -3,7 +3,7 @@ title: React Redux
 parent: Woche 3
 nav_order: 3
 previous: Redux
-next:
+next: Testat
 ---
 
 # React Redux

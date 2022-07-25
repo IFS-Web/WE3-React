@@ -9,12 +9,13 @@
       <tr>
         <td>{{ include.task | markdownify}}</td>
       </tr>
-      <tr class="hint default-hidden" style="color:grey">
+      <tr class="hint default-hidden" style="color: grey">
         <td>{{ include.hint | markdownify}}</td>
       </tr>
     </tbody>
   </table>
   <div class="text-center">
+    {% if include.hint %}
     <button
       class="check btn btn-primary"
       onClick="(function (btn){
@@ -25,5 +26,6 @@
     >
       Tips anzeigen
     </button>
+    {%endif%}
   </div>
 </div>

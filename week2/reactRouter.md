@@ -3,6 +3,7 @@ title: React Router
 parent: Woche 2
 nav_order: 5
 previous: Data Loading
+next: Woche 3 - Einführung
 ---
 
 # React Router

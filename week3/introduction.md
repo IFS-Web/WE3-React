@@ -6,7 +6,21 @@ previous: React Router
 next: Redux
 ---
 
-# Woche 3 - Einführung
+# Redux Einführung
 
-Diese Woche beschäftigen wir uns mit React und React Redux.  
-Vorab werden die grundlegenden Techniken von Redux behandelt. Das erworbende Wissen bietet die Grundlage für die Umsetzung des Testat.
+Vorab werden die grundlegenden Techniken von Redux behandelt:
+
+- State
+- Store
+- Reducer
+- Actions
+
+## Redux Toolkit
+
+Redux wird oft mit zu kompliziertem Boilerplate Code in Verbindung gebracht.
+
+Redux Toolkit nimmt sich dieser Kritik an und erlaubt den verständlichen Umgang mit Redux.
+
+- Slices
+- Config
+- WebTools

@@ -9,5 +9,3 @@ next: Woche 3 - Einführung
 # Woche 3
 
 In dieser Woche vertiefen wir Redux und React-Redux.
-
-Dabei erweitern wir die BOR Applikation.

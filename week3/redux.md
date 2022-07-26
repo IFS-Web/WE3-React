@@ -36,7 +36,7 @@ Eine spezifische **_Aktion_** ändert im **_Store_** durch eine pure **_Reducer_
 Hier ist simples Beispiel von der [Redux Webseite](https://redux.js.org/introduction/getting-started).
 
 ```jsx
-import { createStore } from "redux";
+import { createStore } from 'redux';
 
 /**
  * This is a reducer - a function that takes a current state value and an
@@ -52,9 +52,9 @@ import { createStore } from "redux";
  */
 function counterReducer(state = { value: 0 }, action) {
   switch (action.type) {
-    case "counter/incremented":
+    case 'counter/incremented':
       return { value: state.value + 1 };
-    case "counter/decremented":
+    case 'counter/decremented':
       return { value: state.value - 1 };
     default:
       return state;
@@ -73,11 +73,11 @@ store.subscribe(() => console.log(store.getState()));
 
 // The only way to mutate the internal state is to dispatch an action.
 // The actions can be serialized, logged or stored and later replayed.
-store.dispatch({ type: "counter/incremented" });
+store.dispatch({ type: 'counter/incremented' });
 // {value: 1}
-store.dispatch({ type: "counter/incremented" });
+store.dispatch({ type: 'counter/incremented' });
 // {value: 2}
-store.dispatch({ type: "counter/decremented" });
+store.dispatch({ type: 'counter/decremented' });
 // {value: 1}
 ```
 
@@ -88,47 +88,50 @@ _In a typical Redux app, there is just a single store with a single root reducin
 _This architecture might seem like a lot for a counter app, but the beauty of this pattern is how well it scales to large and complex apps. It also enables very powerful developer tools, because it is possible to trace every mutation to the action that caused it. You can record user sessions and reproduce them just by replaying every action._
 
 ## Redux Toolkit
+
 Das Redux Toolkit erleichtert die Benutzung von Redux.  
-Eine Slice Taktik wird eingeführt, welche es vereinfachtert, verschiednene States, Actions und Reducers zu bündeln und auszulagern. 
+Eine Slice Taktik wird eingeführt, welche es verinfacht, verschiednene States, Actions und Reducers zu bündeln und auszulagern.
 
-Das obige Beispiel sieht durch die Verwendung von Redux Toolkit wiefolgt aus: 
+Das obige Beispiel sieht durch die Verwendung von Redux Toolkit wiefolgt aus:
 
-``` jsx
-import { createSlice, configureStore } from '@reduxjs/toolkit'
+```jsx
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
   name: 'counter',
   initialState: {
-    value: 0
+    value: 0,
   },
   reducers: {
-    incremented: state => {
+    incremented: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.value += 1
+      state.value += 1;
     },
-    decremented: state => {
-      state.value -= 1
-    }
-  }
-})
+    decremented: (state) => {
+      state.value -= 1;
+    },
+  },
+});
 
-export const { incremented, decremented } = counterSlice.actions
+export const { incremented, decremented } = counterSlice.actions;
 
 const store = configureStore({
-  reducer: counterSlice.reducer
-})
+  reducer: counterSlice.reducer,
+});
 
 // Can still subscribe to the store
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => console.log(store.getState()));
 
 // Still pass action objects to `dispatch`, but they're created for us
-store.dispatch(incremented())
+store.dispatch(incremented());
 // {value: 1}
-store.dispatch(incremented())
+store.dispatch(incremented());
 // {value: 2}
-store.dispatch(decremented())
+store.dispatch(decremented());
 // {value: 1}
 ```
+
+Die Ideen und Techniken bleiben dieselben, doch wie wir sehen werden erlaubt das Redux Toolkit eine etwas angenehmere Umsetzung.

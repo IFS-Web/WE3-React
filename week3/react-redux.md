@@ -148,12 +148,12 @@ Diese Änderungen haben nun den **Store** mit einem _LoginSlice_ erweitert. Übe
 {% assign t3-hint = "
 Ist dir bei den beiden Funktionen im Reducer etwas aufgefallen?  
 Die `addUserToState`-Funktion ist nicht **pure**! In _plain Redux_ sollte dies nicht so gelöst werden, aber mit dem _Redux Toolkit_ geht das in Ordnung, da durch eine integrierte Library die mutierten States in einen vollkommen neuen State umgewandelt werden und somit die Funktion durchaus pure ist!  
-Ein weitere Vereinfachung für den Anwendeung des Redux Toolkits.
+Ein weitere Vereinfachung für den Anwendeung des Redux Toolkits. Jeahi;)
 
 " %}
 {% include task.html header=t3-header task=t3-question  hint=t3-hint %}
 
-Der **Store** wurde erfolgreich mit einem initialen `login` Objekt erweitert. Der nächste Schritt ist das Einbinden der `react-redux`-Hooks `useSelector` und `useDispatch`, woauch immer diese Values gebraucht werden.
+Der **Store** wurde erfolgreich mit einem initialen `login` Objekt erweitert. Der nächste Schritt ist das Einbinden der `react-redux`-Hooks `useSelector` und `useDispatch`, woauch immer der State gebraucht oder verändert wird.
 
 {% assign t2-header = "Task" %}
 {% assign t2-question = "Ersetze den *React State* für `user` und `token` in `App.js` mit den Values aus dem Redux Store." %}
@@ -182,6 +182,8 @@ Ein **_Dispatch_** wird folgendermassen initiiert:
 
 {% assign s-header = "Lösung" %}
 {% assign s-solution = "
+
+Die React-State Methode wurde auskommentiert und wird durch Dispatches und Selektoren ersetzt.
 
 ```jsx
 const App = () => {
